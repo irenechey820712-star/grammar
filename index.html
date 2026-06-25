@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grammar Worksheet – Lesson 1 Being a Fan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;font-size:10pt;background:#eef0f5;color:#111;line-height:1.6;}
+
+.page{width:210mm;background:#fff;margin:10px auto;padding:11mm 12mm 10mm;box-shadow:0 2px 14px rgba(0,0,0,.18);}
+@media print{
+  body{background:#fff;}
+  .page{box-shadow:none;margin:0;padding:9mm;page-break-after:always;}
+  @page{size:A4 portrait;margin:7mm;}
+  .no-print{display:none!important;}
+  input[type=text],textarea{border:none;border-bottom:1px solid #333;background:transparent;}
+}
+
+/* ── 헤더 ── */
+.ws-header{display:grid;grid-template-columns:1fr auto;gap:8px;border-bottom:3px solid #1a3a6e;padding-bottom:4px;margin-bottom:6px;}
+.ws-title-block .lesson{font-size:9pt;color:#555;font-weight:400;}
+.ws-title-block h1{font-size:14pt;font-weight:900;color:#1a3a6e;letter-spacing:-.3px;line-height:1.2;}
+.ws-title-block .sub{font-size:8.5pt;color:#777;margin-top:1px;}
+.ws-info{display:flex;flex-direction:column;gap:5px;align-items:flex-end;justify-content:center;}
+.info-row{display:flex;align-items:center;gap:6px;font-size:9pt;}
+.info-label{color:#555;white-space:nowrap;font-weight:500;}
+.info-input{border:none;border-bottom:1.5px solid #333;padding:1px 4px;font-size:9.5pt;font-family:inherit;background:transparent;outline:none;width:120px;}
+.info-input:focus{border-bottom-color:#1a3a6e;background:#f0f4ff;}
+
+/* ── 포인트 헤더 ── */
+.point-block{margin-bottom:5mm;}
+.point-header{display:flex;align-items:center;gap:8px;background:#1a3a6e;color:#fff;padding:4px 10px;border-radius:4px 4px 0 0;}
+.point-label{background:#ffd700;color:#1a3a6e;font-size:8.5pt;font-weight:900;padding:1px 7px;border-radius:10px;white-space:nowrap;}
+.point-title{font-size:11pt;font-weight:700;letter-spacing:.3px;}
+
+/* ── 문법 설명 박스 ── */
+.grammar-box{border:1.5px solid #1a3a6e;border-top:none;border-radius:0 0 0 0;padding:5px 10px 6px;background:#f4f7fb;margin-bottom:0;}
+.grammar-box ul{padding-left:1.2em;margin-bottom:4px;}
+.grammar-box li{font-size:9pt;color:#222;margin-bottom:3px;line-height:1.65;}
+
+/* ── 예시 박스 ── */
+.eg-block{background:#fff;border:1px solid #c8d4f0;border-radius:3px;padding:5px 10px;margin-top:5px;}
+.eg-label{font-size:8pt;font-weight:700;color:#1a3a6e;margin-bottom:3px;}
+.eg-row{font-size:9pt;margin-bottom:4px;line-height:1.6;}
+.eg-row:last-child{margin-bottom:0;}
+.eg-row .eng{font-weight:500;}
+.eg-row .ko{color:#555;font-size:8.5pt;margin-top:0px;}
+
+/* ── 대응표 ── */
+.corr-table-wrap{border:1px solid #1a3a6e;border-top:none;padding:6px 10px 7px;background:#fff;margin-bottom:0;}
+.corr-table-title{font-size:8.5pt;font-weight:700;color:#1a3a6e;margin-bottom:4px;}
+.corr-table{width:100%;border-collapse:collapse;font-size:8.5pt;}
+.corr-table th{background:#1a3a6e;color:#fff;padding:3px 6px;text-align:center;border:1px solid #1a3a6e;}
+.corr-table td{padding:3px 7px;border:1px solid #c8d4f0;text-align:center;vertical-align:middle;line-height:1.5;}
+.corr-table tr:nth-child(even) td{background:#f0f4fb;}
+.corr-table .em{font-weight:700;color:#1a3a6e;}
+.corr-table .prep{color:#7030a0;font-style:italic;}
+.corr-table .note{color:#888;font-size:7.5pt;}
+
+/* ── CHECK / TIP 박스 ── */
+.check-box{border:1.5px solid #e8622a;border-top:none;border-radius:0 0 4px 4px;background:#fff8f4;padding:5px 10px 6px;margin-bottom:4mm;}
+.check-title{font-size:8.5pt;font-weight:900;color:#e8622a;margin-bottom:3px;display:flex;align-items:center;gap:5px;}
+.check-icon{background:#e8622a;color:#fff;font-size:7pt;font-weight:900;padding:0 5px;border-radius:8px;height:14px;line-height:14px;}
+.check-content{font-size:8.5pt;line-height:1.7;color:#222;}
+.check-content table{width:100%;border-collapse:collapse;margin-top:4px;font-size:8.5pt;}
+.check-content table th{background:#fde0d0;padding:2px 6px;border:1px solid #f0c0a0;text-align:center;font-weight:700;color:#a03000;}
+.check-content table td{padding:2px 6px;border:1px solid #f0c0a0;text-align:center;line-height:1.55;}
+.check-content .hl{font-weight:700;color:#e8622a;}
+.check-content .hl2{font-weight:700;color:#1a3a6e;}
+.check-content .note{font-size:8pt;color:#888;margin-top:2px;}
+
+.tip-box{border:1.5px solid #2a6ae8;border-top:none;border-radius:0 0 4px 4px;background:#f0f5ff;padding:5px 10px 6px;margin-bottom:4mm;}
+.tip-title{font-size:8.5pt;font-weight:900;color:#2a6ae8;margin-bottom:3px;display:flex;align-items:center;gap:5px;}
+.tip-icon{background:#2a6ae8;color:#fff;font-size:7pt;font-weight:900;padding:0 5px;border-radius:8px;height:14px;line-height:14px;}
+.tip-content{font-size:8.5pt;line-height:1.7;color:#222;}
+.tip-content .hl{font-weight:700;color:#2a6ae8;}
+.tip-content .hl2{font-weight:700;color:#e8622a;}
+
+/* ── 연습문제 ── */
+.ex-section{margin-bottom:4mm;}
+.ex-header{display:flex;align-items:center;gap:6px;margin-bottom:3mm;}
+.ex-alpha{width:20px;height:20px;border-radius:50%;background:#1a3a6e;color:#fff;font-size:9pt;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ex-direction{font-size:9pt;color:#222;font-weight:500;}
+.ex-list{display:flex;flex-direction:column;gap:4px;padding-left:0;}
+.ex-item{display:flex;align-items:baseline;gap:6px;font-size:9.5pt;}
+.ex-num{width:16px;font-weight:700;color:#1a3a6e;flex-shrink:0;text-align:right;}
+.ex-text{flex:1;line-height:1.7;}
+
+.blank{display:inline-block;min-width:80px;border:none;border-bottom:1.5px solid #333;padding:0 4px;font-size:9.5pt;font-family:inherit;background:transparent;outline:none;vertical-align:baseline;text-align:center;}
+.blank:focus{border-bottom-color:#1a3a6e;background:#f0f4ff;}
+.blank.sm{min-width:55px;}
+.blank.md{min-width:100px;}
+
+.rearrange-box{background:#f8f9fb;border:1px solid #dce3f0;border-radius:3px;padding:4px 8px;font-size:9pt;color:#444;margin-bottom:2px;}
+.answer-line{display:flex;align-items:baseline;gap:4px;margin-top:3px;}
+.ans-arrow{color:#e8622a;font-size:9pt;font-weight:700;white-space:nowrap;}
+.ans-input{flex:1;border:none;border-bottom:1.5px solid #333;padding:1px 4px;font-size:9.5pt;font-family:inherit;background:transparent;outline:none;min-width:0;}
+.ans-input:focus{border-bottom-color:#1a3a6e;background:#f0f4ff;}
+.ans-tail{font-size:9.5pt;white-space:nowrap;}
+
+.corr-eng{font-size:9.5pt;margin-bottom:1px;}
+.corr-ans{display:flex;align-items:baseline;gap:4px;}
+.corr-arrow{color:#e8622a;font-size:9pt;font-weight:700;}
+
+/* ── 분리선 ── */
+.divider{border:none;border-top:1.5px dashed #c0c8d8;margin:4mm 0;}
+
+/* ── 정답/해석 섹션 ── */
+.answer-section{margin-top:2mm;border:1.5px solid #3aad4f;border-radius:4px;overflow:hidden;}
+.ans-header{background:#3aad4f;color:#fff;font-size:10pt;font-weight:700;padding:4px 10px;display:flex;align-items:center;gap:8px;}
+.toggle-btn{font-size:8.5pt;background:rgba(255,255,255,.25);border:none;color:#fff;padding:2px 8px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:700;}
+.toggle-btn:hover{background:rgba(255,255,255,.4);}
+.ans-body{padding:6px 12px;background:#f0fbf4;display:none;}
+.ans-body.show{display:block;}
+.ans-point{margin-bottom:5px;}
+.ans-point-title{font-size:9.5pt;font-weight:700;color:#1a3a6e;margin-bottom:3px;border-bottom:1px dashed #c0d8c0;padding-bottom:2px;}
+.ans-grid{display:grid;grid-template-columns:auto 1fr;gap:1px 8px;font-size:9pt;}
+.ans-num{font-weight:700;color:#1a3a6e;text-align:right;}
+.ans-val{color:#111;line-height:1.55;}
+.ans-ko{font-size:8.5pt;color:#555;margin-top:1px;line-height:1.5;}
+
+.trans-section{margin-top:3mm;border:1.5px solid #2a6ae8;border-radius:4px;overflow:hidden;}
+.trans-header{background:#2a6ae8;color:#fff;font-size:10pt;font-weight:700;padding:4px 10px;display:flex;align-items:center;gap:8px;}
+.trans-body{padding:6px 12px;background:#f0f5ff;display:none;}
+.trans-body.show{display:block;}
+.trans-point-title{font-size:9.5pt;font-weight:700;color:#1a3a6e;margin-bottom:3px;border-bottom:1px dashed #b0c4f0;padding-bottom:2px;}
+.trans-grid{display:grid;grid-template-columns:auto 1fr;gap:1px 8px;font-size:9pt;margin-bottom:5px;}
+.trans-num{font-weight:700;color:#1a3a6e;text-align:right;white-space:nowrap;}
+.trans-val{color:#111;line-height:1.55;}
+
+.ws-footer{text-align:right;font-size:7.5pt;color:#aaa;margin-top:4mm;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 헤더 -->
+  <div class="ws-header">
+    <div class="ws-title-block">
+      <div class="lesson">Lesson 1 &nbsp;·&nbsp; Being a Fan: Passion and Pride</div>
+      <h1>Grammar Worksheet</h1>
+      <div class="sub">관계부사 &nbsp;/&nbsp; 결과를 나타내는 so ~ that</div>
+    </div>
+    <div class="ws-info">
+      <div class="info-row">
+        <span class="info-label">Student ID</span>
+        <input class="info-input" type="text" autocomplete="off">
+      </div>
+      <div class="info-row">
+        <span class="info-label">Name</span>
+        <input class="info-input" type="text" autocomplete="off" style="width:140px;">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ POINT 1 ═══════════════════════════════ -->
+  <div class="point-block">
+    <div class="point-header">
+      <span class="point-label">Point 1</span>
+      <span class="point-title">관계부사</span>
+    </div>
+
+    <!-- 기본 설명 -->
+    <div class="grammar-box">
+      <ul>
+        <li>관계부사절은 관계대명사절처럼 절 앞의 명사(선행사)를 꾸며주는 <strong>형용사 역할</strong>을 한다. 그러나 관계부사 다음에는 <strong>완전한 절</strong>이 오고, 관계대명사 다음에는 <strong>불완전한 절</strong>이 온다.</li>
+        <li>선행사의 종류에 따라 <strong>when</strong>(시간), <strong>why</strong>(이유), <strong>where</strong>(장소), <strong>how</strong>(방법)의 관계부사가 쓰인다. 단, <strong>the way</strong>는 <strong>how</strong>와 함께 쓸 수 없으므로 둘 중 하나만 쓴다.</li>
+        <li>관계부사는 <strong>「전치사 + 관계대명사」</strong>로 바꾸어 쓸 수 있다.</li>
+      </ul>
+      <div class="eg-block">
+        <div class="eg-label">예시</div>
+        <div class="eg-row">
+          <span class="eng">The time <strong>when</strong>(= <em>at which</em>) he came home was very late.</span>
+          <div class="ko">그가 집에 돌아온 시간은 매우 늦었다.</div>
+        </div>
+        <div class="eg-row">
+          <span class="eng">Our science teacher explained the reason <strong>why</strong>(= <em>for which</em>) there were more tropical nights this year.</span>
+          <div class="ko">과학 선생님은 왜 올해 더 많은 열대야가 있었는지 그 이유에 대해 설명해 주셨다.</div>
+        </div>
+        <div class="eg-row">
+          <span class="eng">The captain already knows the place <strong>where</strong>(= <em>at which</em>) the treasure is buried.</span>
+          <div class="ko">선장은 보물이 묻힌 장소를 이미 알고 있다.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 대응표 -->
+    <div class="corr-table-wrap">
+      <div class="corr-table-title">▶ 선행사 – 관계부사 – 전치사+관계대명사 대응표</div>
+      <table class="corr-table">
+        <tr>
+          <th>선행사 (Antecedent)</th>
+          <th>관계부사</th>
+          <th>= 전치사 + 관계대명사</th>
+          <th>선행사 생략 가능?</th>
+        </tr>
+        <tr>
+          <td>시간 명사<br><span class="note">the time, the day, the year…</span></td>
+          <td><span class="em">when</span></td>
+          <td><span class="prep">at / on / in which</span></td>
+          <td>✔ 가능</td>
+        </tr>
+        <tr>
+          <td>이유 명사<br><span class="note">the reason</span></td>
+          <td><span class="em">why</span></td>
+          <td><span class="prep">for which</span></td>
+          <td>✔ 가능</td>
+        </tr>
+        <tr>
+          <td>장소 명사<br><span class="note">the place, the city, the house…</span></td>
+          <td><span class="em">where</span></td>
+          <td><span class="prep">at / in / on which</span></td>
+          <td>✔ 가능</td>
+        </tr>
+        <tr>
+          <td>방법<br><span class="note">the way (<strong>선행사 자체가 생략</strong>)</span></td>
+          <td><span class="em">how</span></td>
+          <td><span class="prep">in which</span></td>
+          <td>⚠ the way <strong>또는</strong> how 중 하나만</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- CHECK 박스: 관계부사 vs 관계대명사 -->
+    <div class="check-box">
+      <div class="check-title"><span class="check-icon">CHECK</span>관계부사 vs. 관계대명사 구별법</div>
+      <div class="check-content">
+        관계부사 뒤에는 <span class="hl">완전한 절(S+V 모두 존재)</span>이 오고, 관계대명사 뒤에는 <span class="hl2">불완전한 절(S 또는 O 빠짐)</span>이 온다.
+        <table>
+          <tr>
+            <th style="width:15%">구분</th>
+            <th style="width:42%">예문</th>
+            <th>구조</th>
+          </tr>
+          <tr>
+            <td><span class="hl">관계부사</span></td>
+            <td>This is the city <strong>where</strong> I was born.</td>
+            <td>where 뒤 → <em>I was born</em> (완전한 절 ✔)</td>
+          </tr>
+          <tr>
+            <td><span class="hl2">관계대명사</span></td>
+            <td>This is the city <strong>that / which</strong> I love.</td>
+            <td>that 뒤 → <em>I love ___</em> (목적어 빠짐 ✔)</td>
+          </tr>
+        </table>
+        <div class="note">※ 뒤에 오는 절이 완전하면 → 관계부사 / 불완전하면 → 관계대명사</div>
+      </div>
+    </div>
+
+    <!-- TIP 박스: the way / how 주의 -->
+    <div class="tip-box">
+      <div class="tip-title"><span class="tip-icon">TIP</span>the way와 how는 함께 쓸 수 없다!</div>
+      <div class="tip-content">
+        <span class="hl">the way how</span> ✗ &nbsp;→&nbsp; <span class="hl2">the way</span> ✔ &nbsp;또는&nbsp; <span class="hl2">how</span> ✔ &nbsp;또는&nbsp; <span class="hl2">the way in which</span> ✔<br>
+        <div style="margin-top:3px;">
+          예) <em>I like <span class="hl2">the way</span> she explains grammar.</em> &nbsp;/&nbsp;
+          <em>I like <span class="hl2">how</span> she explains grammar.</em> &nbsp;→ 둘 다 OK<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<em>I like <span class="hl">the way how</span> she explains.</em> &nbsp;→ ✗ (함께 사용 불가)
+        </div>
+      </div>
+    </div>
+
+    <!-- P1 Exercise A -->
+    <div class="ex-section">
+      <div class="ex-header">
+        <div class="ex-alpha">A</div>
+        <div class="ex-direction">빈칸에 알맞은 관계부사를 써서 문장을 완성하시오.</div>
+      </div>
+      <div class="ex-list">
+        <div class="ex-item">
+          <span class="ex-num">1.</span>
+          <span class="ex-text">She described <input class="blank sm" type="text" autocomplete="off"> the machine works in simple terms.</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">2.</span>
+          <span class="ex-text">One of the reasons <input class="blank sm" type="text" autocomplete="off"> he quit the team was his injury.</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">3.</span>
+          <span class="ex-text">Do you know the date <input class="blank sm" type="text" autocomplete="off"> we have to submit our assignments?</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">4.</span>
+          <span class="ex-text">The bookstore <input class="blank sm" type="text" autocomplete="off"> the author will hold a book signing is on the second floor.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- P1 Exercise B -->
+    <div class="ex-section">
+      <div class="ex-header">
+        <div class="ex-alpha">B</div>
+        <div class="ex-direction">두 문장을 관계부사를 사용하여 한 문장으로 완성하시오.</div>
+      </div>
+
+      <div style="margin-bottom:5px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">1.</span>
+          <div class="ex-text">
+            <div class="rearrange-box">Ms. Brown taught me the way. &nbsp;We could study English more efficiently <u>in the way</u>.</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <span style="font-size:9.5pt;white-space:nowrap;">Ms. Brown taught me</span>
+              <input class="ans-input" type="text" autocomplete="off">
+              <span class="ans-tail">.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom:5px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">2.</span>
+          <div class="ex-text">
+            <div class="rearrange-box">The website is reliable. &nbsp;I usually get a lot of information for my report <u>on that website</u>.</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <span style="font-size:9.5pt;white-space:nowrap;">The website</span>
+              <input class="ans-input" type="text" autocomplete="off">
+              <span class="ans-tail">is reliable.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom:5px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">3.</span>
+          <div class="ex-text">
+            <div class="rearrange-box">This book explains the reason. &nbsp;The Korean War broke out <u>for the reason</u>.</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <span style="font-size:9.5pt;white-space:nowrap;">This book explains</span>
+              <input class="ans-input" type="text" autocomplete="off">
+              <span class="ans-tail">.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end point 1 -->
+
+
+  <hr class="divider">
+
+
+  <!-- ═══════════════════════════════ POINT 2 ═══════════════════════════════ -->
+  <div class="point-block">
+    <div class="point-header">
+      <span class="point-label">Point 2</span>
+      <span class="point-title">결과를 나타내는 so ∼ that</span>
+    </div>
+
+    <!-- 기본 설명 -->
+    <div class="grammar-box">
+      <ul>
+        <li>사람 또는 사물의 행위나 상태 때문에 특정한 결과가 야기된 상황에서 쓰인다. <strong>'너무나 ~해서 (그 결과) …하다'</strong>라는 의미를 가진다.</li>
+        <li><strong>「so + 형용사/부사 + that절」</strong> 형태로 쓰이며 that 뒤에 결과에 해당하는 내용이 온다.</li>
+        <li>목적을 나타내는 <strong>so that</strong>(~하기 위해서)과 구별하여 사용해야 한다.</li>
+      </ul>
+      <div class="eg-block">
+        <div class="eg-label">예시</div>
+        <div class="eg-row">
+          <span class="eng">The book was <strong>so</strong> interesting <strong>that</strong> I finished it in one day.</span>
+          <div class="ko">그 책은 너무 재미있어서 나는 하루 만에 그것을 다 읽었다.</div>
+        </div>
+        <div class="eg-row">
+          <span class="eng">They spoke <strong>so</strong> loudly <strong>that</strong> everyone in the room could hear their conversation.</span>
+          <div class="ko">그들이 너무 크게 말해서 그 방에 있던 모든 사람이 그들의 대화를 들을 수 있었다.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 대응표: so~that(결과) vs so that(목적) -->
+    <div class="corr-table-wrap">
+      <div class="corr-table-title">▶ so ~ that (결과) vs. so that (목적) 비교</div>
+      <table class="corr-table">
+        <tr>
+          <th>구분</th>
+          <th>형태</th>
+          <th>의미</th>
+          <th>예문</th>
+        </tr>
+        <tr>
+          <td><strong>결과</strong></td>
+          <td><span class="em">so + 형/부 + that</span></td>
+          <td>너무 ~해서 …하다</td>
+          <td>She was <em>so tired that</em> she fell asleep.</td>
+        </tr>
+        <tr>
+          <td><strong>목적</strong></td>
+          <td><span class="em">so that + S + can/will/may</span></td>
+          <td>~하기 위해서</td>
+          <td>He studied hard <em>so that</em> he could pass.</td>
+        </tr>
+      </table>
+      <div style="font-size:8pt;color:#666;margin-top:4px;">
+        ※ <strong>구별 포인트:</strong> so 바로 뒤에 <span style="color:#e8622a;font-weight:700;">형용사 또는 부사</span>가 오면 결과 구문 &nbsp;/&nbsp; so 바로 뒤에 <span style="color:#2a6ae8;font-weight:700;">that S + V</span>가 이어지면 목적 구문
+      </div>
+    </div>
+
+    <!-- such ~ that 비교 -->
+    <div class="check-box">
+      <div class="check-title"><span class="check-icon">CHECK</span>such ~ that 구문과 비교하기</div>
+      <div class="check-content">
+        <strong>so ~ that</strong>과 같은 의미의 <span class="hl">such ~ that</span> 구문도 자주 출제된다.
+        <table style="margin-top:4px;">
+          <tr>
+            <th>구문</th>
+            <th>형태</th>
+            <th>예문</th>
+          </tr>
+          <tr>
+            <td><span class="hl">so ~ that</span></td>
+            <td>so + <u>형용사/부사</u> + that</td>
+            <td>It was <em>so cold that</em> we stayed inside.</td>
+          </tr>
+          <tr>
+            <td><span class="hl2">such ~ that</span></td>
+            <td>such + <u>(a/an) + 형용사 + 명사</u> + that</td>
+            <td>It was <em>such cold weather that</em> we stayed inside.</td>
+          </tr>
+        </table>
+        <div class="note">※ so 뒤에는 형용사/부사, such 뒤에는 명사(구)가 온다는 점이 핵심 차이!</div>
+      </div>
+    </div>
+
+    <!-- TIP: too ~ to와 비교 -->
+    <div class="tip-box">
+      <div class="tip-title"><span class="tip-icon">TIP</span>so ~ that 결과 구문의 변환 패턴</div>
+      <div class="tip-content">
+        <table style="width:100%;border-collapse:collapse;font-size:8.5pt;margin-top:2px;">
+          <tr>
+            <th style="background:#dde8ff;border:1px solid #b0c4f0;padding:2px 6px;text-align:center;color:#1a3a6e;">so ~ that (결과)</th>
+            <th style="background:#dde8ff;border:1px solid #b0c4f0;padding:2px 6px;text-align:center;color:#1a3a6e;">too ~ to (부정 결과)</th>
+            <th style="background:#dde8ff;border:1px solid #b0c4f0;padding:2px 6px;text-align:center;color:#1a3a6e;">~ enough to (긍정 결과)</th>
+          </tr>
+          <tr>
+            <td style="border:1px solid #b0c4f0;padding:2px 6px;text-align:center;">He was <span class="hl">so tired that</span> he couldn't work.</td>
+            <td style="border:1px solid #b0c4f0;padding:2px 6px;text-align:center;">He was <span class="hl2">too tired to</span> work.</td>
+            <td style="border:1px solid #b0c4f0;padding:2px 6px;text-align:center;color:#888;">—</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #b0c4f0;padding:2px 6px;text-align:center;">She was <span class="hl">so strong that</span> she could lift it.</td>
+            <td style="border:1px solid #b0c4f0;padding:2px 6px;text-align:center;color:#888;">—</td>
+            <td style="border:1px solid #b0c4f0;padding:2px 6px;text-align:center;">She was <span class="hl2">strong enough to</span> lift it.</td>
+          </tr>
+        </table>
+        <div style="margin-top:3px;font-size:8pt;color:#555;">※ 부정 결과(couldn't / was unable to)는 <span class="hl2">too ~ to</span>로 전환, 긍정 결과는 <span class="hl2">~ enough to</span>로 전환 가능</div>
+      </div>
+    </div>
+
+    <!-- P2 Exercise A -->
+    <div class="ex-section">
+      <div class="ex-header">
+        <div class="ex-alpha">A</div>
+        <div class="ex-direction">우리말과 일치하도록 괄호 안의 말을 바르게 배열하시오.</div>
+      </div>
+
+      <div style="margin-bottom:6px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">1.</span>
+          <div class="ex-text">
+            <div style="font-size:9pt;color:#555;margin-bottom:2px;">폭풍이 너무 강해서 창문이 밤새 덜컹거렸다.</div>
+            <div class="rearrange-box">( the windows / strong / rattled / the storm / was / so / that )</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off" placeholder="배열하여 쓰시오">
+              <span class="ans-tail">all night.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:6px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">2.</span>
+          <div class="ex-text">
+            <div style="font-size:9pt;color:#555;margin-bottom:2px;">그 선수가 너무 빨리 달려서 경주 중에 아무도 그를 따라잡지 못했다.</div>
+            <div class="rearrange-box">( ran / the athlete / could / fast / that / him / no one / so / catch )</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off" placeholder="배열하여 쓰시오">
+              <span class="ans-tail">during the race.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:6px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">3.</span>
+          <div class="ex-text">
+            <div style="font-size:9pt;color:#555;margin-bottom:2px;">그 장학금은 경쟁이 너무 치열해서 우리 지역에서 지원자 한 명만 선발되었다.</div>
+            <div class="rearrange-box">( was / the scholarship / so / only one applicant / competitive / that / from our region )</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off" placeholder="배열하여 쓰시오">
+              <span class="ans-tail">was selected.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:6px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">4.</span>
+          <div class="ex-text">
+            <div style="font-size:9pt;color:#555;margin-bottom:2px;">인터넷이 너무 느려서 그 파일을 받는 데 30분이 걸렸다.</div>
+            <div class="rearrange-box">( slow / thirty minutes / was / so / the internet / took / the file / that )</div>
+            <div class="answer-line">
+              <span class="ans-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off" placeholder="배열하여 쓰시오">
+              <span class="ans-tail">to download.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P2 Exercise B -->
+    <div class="ex-section">
+      <div class="ex-header">
+        <div class="ex-alpha">B</div>
+        <div class="ex-direction">다음 문장이 어법상 옳으면 O를 쓰고, 틀리면 바르게 고치시오.</div>
+      </div>
+
+      <div style="margin-bottom:5px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">1.</span>
+          <div class="ex-text">
+            <div class="corr-eng">The traffic was heavy so that we missed the beginning of the movie.</div>
+            <div class="corr-ans">
+              <span class="corr-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom:5px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">2.</span>
+          <div class="ex-text">
+            <div class="corr-eng">We are collecting feedback so that we can improve the service next semester.</div>
+            <div class="corr-ans">
+              <span class="corr-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom:5px;">
+        <div class="ex-item" style="align-items:flex-start;">
+          <span class="ex-num" style="margin-top:2px;">3.</span>
+          <div class="ex-text">
+            <div class="corr-eng">The evidence was convincing so that the jury reached a quick verdict.</div>
+            <div class="corr-ans">
+              <span class="corr-arrow">→</span>
+              <input class="ans-input" type="text" autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end point 2 -->
+
+
+  <hr class="divider">
+
+
+  <!-- ═══════════════════════════════ 정답 ═══════════════════════════════ -->
+  <div class="answer-section no-print">
+    <div class="ans-header">
+      ✅ 정답 (Answer Key)
+      <button class="toggle-btn" id="ansBtn" onclick="toggle('ansBody','ansBtn','정답 보기','정답 닫기')">정답 보기</button>
+    </div>
+    <div class="ans-body" id="ansBody">
+      <div class="ans-point">
+        <div class="ans-point-title">Point 1 &nbsp; A</div>
+        <div class="ans-grid">
+          <span class="ans-num">1.</span><span class="ans-val">how</span>
+          <span class="ans-num">2.</span><span class="ans-val">why</span>
+          <span class="ans-num">3.</span><span class="ans-val">when</span>
+          <span class="ans-num">4.</span><span class="ans-val">where</span>
+        </div>
+      </div>
+      <div class="ans-point">
+        <div class="ans-point-title">Point 1 &nbsp; B</div>
+        <div class="ans-grid">
+          <span class="ans-num">1.</span><span class="ans-val">how [= the way (in which)] we could study English more efficiently</span>
+          <span class="ans-num">2.</span><span class="ans-val">where I usually get a lot of information for my report</span>
+          <span class="ans-num">3.</span><span class="ans-val">the reason why the Korean War broke out</span>
+        </div>
+      </div>
+      <div class="ans-point">
+        <div class="ans-point-title">Point 2 &nbsp; A</div>
+        <div class="ans-grid">
+          <span class="ans-num">1.</span><span class="ans-val">The storm was so strong that the windows rattled all night.</span>
+          <span class="ans-num">2.</span><span class="ans-val">The athlete ran so fast that no one could catch him during the race.</span>
+          <span class="ans-num">3.</span><span class="ans-val">The scholarship was so competitive that only one applicant from our region was selected.</span>
+          <span class="ans-num">4.</span><span class="ans-val">The internet was so slow that the file took thirty minutes to download.</span>
+        </div>
+      </div>
+      <div class="ans-point">
+        <div class="ans-point-title">Point 2 &nbsp; B</div>
+        <div class="ans-grid">
+          <span class="ans-num">1.</span>
+          <div>
+            <div class="ans-val" style="color:#c00000;">The traffic was <u>so heavy that</u> we missed the beginning of the movie.</div>
+            <div class="ans-ko">※ 결과를 나타내므로 <em>heavy so that</em> → <strong>so heavy that</strong>으로 어순을 바꿔야 한다. (so는 형용사 앞에 위치)</div>
+          </div>
+          <span class="ans-num">2.</span>
+          <div>
+            <div class="ans-val" style="color:#1a6e1a;">O</div>
+            <div class="ans-ko">※ <em>so that</em> = "~하기 위해서" (목적) → 바르게 쓰인 문장.</div>
+          </div>
+          <span class="ans-num">3.</span>
+          <div>
+            <div class="ans-val" style="color:#c00000;">The evidence was <u>so convincing that</u> the jury reached a quick verdict.</div>
+            <div class="ans-ko">※ 결과를 나타내므로 <em>convincing so that</em> → <strong>so convincing that</strong>으로 어순을 바꿔야 한다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ 해석 ═══════════════════════════════ -->
+  <div class="trans-section no-print" style="margin-top:3mm;">
+    <div class="trans-header">
+      🌐 해석 (Translation)
+      <button class="toggle-btn" id="transBtn" onclick="toggle('transBody','transBtn','해석 보기','해석 닫기')">해석 보기</button>
+    </div>
+    <div class="trans-body" id="transBody">
+      <div class="trans-point-title">Point 1 &nbsp; A</div>
+      <div class="trans-grid">
+        <span class="trans-num">1.</span><span class="trans-val">그녀는 그 기계가 어떻게 작동하는지를 쉬운 말로 설명하였다.</span>
+        <span class="trans-num">2.</span><span class="trans-val">그가 팀을 그만둔 이유 중 하나는 부상이었다.</span>
+        <span class="trans-num">3.</span><span class="trans-val">우리가 과제를 제출해야 하는 날짜를 아니?</span>
+        <span class="trans-num">4.</span><span class="trans-val">작가가 사인회를 할 서점은 2층에 있다.</span>
+      </div>
+      <div class="trans-point-title">Point 1 &nbsp; B</div>
+      <div class="trans-grid">
+        <span class="trans-num">1.</span><span class="trans-val">브라운 선생님은 우리가 영어를 더 효율적으로 공부할 수 있는 방법을 내게 가르쳐 주셨다.</span>
+        <span class="trans-num">2.</span><span class="trans-val">내가 보통 보고서를 위해 많은 정보를 얻는 웹사이트는 신뢰할 만하다.</span>
+        <span class="trans-num">3.</span><span class="trans-val">이 책은 한국전쟁이 발발한 이유를 설명한다.</span>
+      </div>
+      <div class="trans-point-title">Point 2 &nbsp; B</div>
+      <div class="trans-grid">
+        <span class="trans-num">1.</span><span class="trans-val">교통 체증이 너무 심해서 우리는 영화 시작 부분을 놓쳤다.</span>
+        <span class="trans-num">2.</span><span class="trans-val">우리는 다음 학기에 서비스를 개선하기 위해 피드백을 수집하고 있다.</span>
+        <span class="trans-num">3.</span><span class="trans-val">증거가 매우 설득력이 있어서 배심원단은 빠르게 평결을 내렸다.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ws-footer">Lesson 1 · Being a Fan: Passion and Pride &nbsp;·&nbsp; Grammar Worksheet</div>
+</div>
+
+<script>
+function toggle(bodyId, btnId, openLabel, closeLabel) {
+  var body = document.getElementById(bodyId);
+  var btn  = document.getElementById(btnId);
+  if (body.classList.contains('show')) {
+    body.classList.remove('show');
+    btn.textContent = openLabel;
+  } else {
+    body.classList.add('show');
+    btn.textContent = closeLabel;
+  }
+}
+</script>
+</body>
+</html>
